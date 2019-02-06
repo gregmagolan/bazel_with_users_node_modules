@@ -8,10 +8,14 @@ refresh(
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
+# local_repository(
+#     name = "build_bazel_rules_nodejs",
+#     path = "../rules_nodejs",
+# )
 http_archive(
     name = "build_bazel_rules_nodejs",
-    strip_prefix = "rules_nodejs-badc4ec96d86e94d6259d93fa0399b5ff9d65494",
-    urls = ["https://github.com/gregmagolan/rules_nodejs/archive/badc4ec96d86e94d6259d93fa0399b5ff9d65494.zip"],
+    strip_prefix = "rules_nodejs-0cc179f62af7ecd6607a395315305a32bd4867d7",
+    urls = ["https://github.com/gregmagolan/rules_nodejs/archive/0cc179f62af7ecd6607a395315305a32bd4867d7.zip"],
 )
 
 load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories", "npm_install", "yarn_install")
