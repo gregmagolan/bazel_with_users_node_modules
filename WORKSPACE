@@ -8,14 +8,11 @@ refresh(
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-# local_repository(
-#     name = "build_bazel_rules_nodejs",
-#     path = "../rules_nodejs",
-# )
+# Custom dist of node_modules proto branch
 http_archive(
     name = "build_bazel_rules_nodejs",
-    strip_prefix = "rules_nodejs-0cc179f62af7ecd6607a395315305a32bd4867d7",
-    urls = ["https://github.com/gregmagolan/rules_nodejs/archive/0cc179f62af7ecd6607a395315305a32bd4867d7.zip"],
+    strip_prefix = "rules_nodejs-f4f3f65c5a4cfe892086d559e2fb6ec7b3ac4a5a",
+    urls = ["https://github.com/gregmagolan/rules_nodejs/archive/f4f3f65c5a4cfe892086d559e2fb6ec7b3ac4a5a.zip"],
 )
 
 load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories", "npm_install", "yarn_install")
@@ -26,10 +23,12 @@ node_repositories()
 # npm_install(
 #     name = "npm",
 #     package_json = "//:package.json",
+#     package_lock_json = "//:package-lock.json",
 #     quiet = False,
 # )
 yarn_install(
     name = "npm",
     package_json = "//:package.json",
+    yarn_lock = "//:yarn.lock",
     quiet = False,
 )

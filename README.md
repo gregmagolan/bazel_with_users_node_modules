@@ -1,14 +1,8 @@
 # bazel_with_users_node_modules
-[Bazel] Prototyping creating a local repository for already existing node_modules in the user's project
+Prototyping using yarn_install & npm_install with user's node_modules folder.
 
-First install bazel 'experimental' release with,
-
-```
-yarn
-```
-
-Then run the target,
+Using Bazel 'experimental' release with run the target,
 
 ```
-yarn bazel run main
+bazel run main
 ```

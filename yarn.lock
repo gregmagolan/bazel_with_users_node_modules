@@ -2,30 +2,6 @@
 # yarn lockfile v1
 
 
-"@bazel/bazel-darwin_x64@0.30.0-beta.0":
-  version "0.30.0-beta.0"
-  resolved "https://registry.yarnpkg.com/@bazel/bazel-darwin_x64/-/bazel-darwin_x64-0.30.0-beta.0.tgz#a3ff8a01ab05c667869a2bb8f69256ff1d4ecaa5"
-  integrity sha512-5WUTv8wGlQcKmyrn95nyl3Mjc2+MQLEpHJZyDjSzCrrx8NeaiwappBLQKib+8OlQeBCbQw4u3k3j2P8BmuzQlg==
-
-"@bazel/bazel-linux_x64@0.30.0-beta.6":
-  version "0.30.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@bazel/bazel-linux_x64/-/bazel-linux_x64-0.30.0-beta.6.tgz#279ee19909f44d92655e40a6c3378a2a35e0bacf"
-  integrity sha512-J4d11mSvPifuEZU7YsuEGxPH1ru3/lwFGjWxpH+9A5/Hptlnyc4FyYUJ4JVmaf/P2RMUUJXpYmCSy4uBfCKxfg==
-
-"@bazel/bazel-win32_x64@0.19.1":
-  version "0.19.1"
-  resolved "https://registry.yarnpkg.com/@bazel/bazel-win32_x64/-/bazel-win32_x64-0.19.1.tgz#273c43b0febc11675614c402ec82ae44b519f9ee"
-  integrity sha512-t6vOh2IOzUAk19ccS0q3Kho364Yxjtjv1v4utAjOSNw8GVwutfekdiojGBrR8ihvJi1Xp885mOkQnZA38B9tvQ==
-
-"@bazel/bazel@experimental":
-  version "0.30.0-beta.6"
-  resolved "https://registry.yarnpkg.com/@bazel/bazel/-/bazel-0.30.0-beta.6.tgz#a9c33e22b1165a4c72f4b087acc85dd251f95187"
-  integrity sha512-W9HdS+tbmopJbExNovlIlV40brFH6/yEm6qFhmxi7c9/FgzoQ6dgRKqnlhScd1u6nwBEdhh/GeU1ajw0bVUE/Q==
-  optionalDependencies:
-    "@bazel/bazel-darwin_x64" "0.30.0-beta.0"
-    "@bazel/bazel-linux_x64" "0.30.0-beta.6"
-    "@bazel/bazel-win32_x64" "0.19.1"
-
 typescript@2.9.1:
   version "2.9.1"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.1.tgz#fdb19d2c67a15d11995fd15640e373e09ab09961"
