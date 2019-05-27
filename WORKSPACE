@@ -1,23 +1,18 @@
-workspace(name = "bazel_with_users_node_modules")
-
-# refresh declaration should come in "header" of workspace file, before any loads
-refresh(
-    roots = ["node_modules"],
-    repository = "npm"
+workspace(
+    name = "bazel_with_users_node_modules",
+    managed_directories = {"@npm": ["node_modules"]},
 )
+
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-# Custom dist of node_modules proto branch
 http_archive(
     name = "build_bazel_rules_nodejs",
-    strip_prefix = "rules_nodejs-f4f3f65c5a4cfe892086d559e2fb6ec7b3ac4a5a",
-    urls = ["https://github.com/gregmagolan/rules_nodejs/archive/f4f3f65c5a4cfe892086d559e2fb6ec7b3ac4a5a.zip"],
+    sha256 = "abcf497e89cfc1d09132adfcd8c07526d026e162ae2cb681dcb896046417ce91",
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/0.30.1/rules_nodejs-0.30.1.tar.gz"],
 )
 
-load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories", "npm_install", "yarn_install")
-
-node_repositories()
+load("@build_bazel_rules_nodejs//:defs.bzl", "npm_install", "yarn_install")
 
 # Uncomment the npm install rule to test
 # npm_install(
@@ -26,6 +21,7 @@ node_repositories()
 #     package_lock_json = "//:package-lock.json",
 #     quiet = False,
 # )
+
 yarn_install(
     name = "npm",
     package_json = "//:package.json",
