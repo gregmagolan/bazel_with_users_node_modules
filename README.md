@@ -1,8 +1,7 @@
-# bazel_with_users_node_modules
-Prototyping using yarn_install & npm_install with user's node_modules folder.
+# Simple example of using node_modules in the user's with Bazel
 
-Using Bazel 'experimental' release with run the target,
+This is using the managed directories feature added in Bazel 0.26.0 with rules_nodejs 0.30.1.
 
 ```
-bazel run main
+bazel test ...
 ```
